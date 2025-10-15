@@ -42,10 +42,15 @@ The fitted model matches the experimental temperature evolution almost perfectly
 
 ## Repository structure
 ├── main.tex # LaTeX report (Overleaf-ready)
+
 ├── Estimation_of_incident_power_by_transient_heating.pdf
+
 ├── python_fit_copper_heating.py # Analysis & fitting code
+
 ├── copper_temperature.txt # Experimental data
+
 ├── Curbe copper heating.png # Resulting plot
+
 └── README.md # This file
 
 
