@@ -24,7 +24,7 @@ from scipy.optimize import curve_fit
 # -----------------------------
 # Defaults (can be overridden via CLI args)
 # -----------------------------
-DEFAULT_FILE = Path(__file__).parent / "data" / "copper_temperature.txt"
+DEFAULT_FILE = Path(__file__).parent / "copper_temperature.txt"
 DEFAULT_ALPHA = 0.03          # set None if unknown; e.g., 0.95 for matte black paint
 DEFAULT_USE_DRIFT = True      # model T_inf(t) = T_inf0 + beta * t
 DEFAULT_DROP_LAST = True      # drop last row (often empty/NaN in exported logs)
@@ -249,3 +249,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
