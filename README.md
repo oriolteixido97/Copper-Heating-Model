@@ -8,9 +8,9 @@ This project combines **experimental data acquisition** and **analytical modelin
 A 1×1 cm copper plate (1 mm thick) was irradiated by a tungsten lamp.  
 Temperature was measured with a **Type-K thermocouple** connected to a **CR1000X datalogger**.  
 From the measured transient, a **lumped-capacity model** was applied to extract:
-- absorbed power \( P_\text{abs} \),
-- total heat transfer coefficient \( h_\text{tot} \),
-- time constant \( \tau \),
+- absorbed power \( P_abs \),
+- total heat transfer coefficient \( h_tot \),
+- time constant \( τ \),
 - and ambient drift parameters.
 
 ---
@@ -19,7 +19,7 @@ From the measured transient, a **lumped-capacity model** was applied to extract:
 The plate is treated as a single thermal node obeying:
 
 \[
-C\frac{dT}{dt} = P_\text{abs} - h_\text{tot}A_s(T - T_\infty),
+C\frac{dT}{dt} = P_abs - h_tot·A_s(T - T_\infty),
 \]
 
 whose analytical solution, including slow ambient drift, was fitted to the data using **SciPy’s `curve_fit`**.  
@@ -30,11 +30,11 @@ The model achieves **R² > 0.999**, reproducing the experimental curve with resi
 ## Results
 | Parameter | Symbol | Value |
 |------------|---------|--------|
-| Absorbed power | \( P_\text{abs} \) | 0.292 W |
-| Heat transfer coefficient | \( h_\text{tot} \) | 28 W/m²K |
-| Time constant | \( \tau \) | 123 s |
-| Absorbed flux | \( q''_\text{abs} \) | 2.9 × 10³ W/m² |
-| Incident flux (α = 0.03) | \( q''_\text{incident} \) | 9.7 × 10⁴ W/m² |
+| Absorbed power | \( P_abs \) | 0.292 W |
+| Heat transfer coefficient | \( h_tot \) | 28 W/m²K |
+| Time constant | \(τ\) | 123 s |
+| Absorbed flux | \( q''_abs \) | 2.9 × 10³ W/m² |
+| Incident flux (α = 0.03) | \( q''_incident \) | 9.7 × 10⁴ W/m² |
 
 The fitted model matches the experimental temperature evolution almost perfectly, validating the lumped-capacity assumption and the extracted parameters.
 
@@ -59,7 +59,7 @@ The fitted model matches the experimental temperature evolution almost perfectly
 ## Tools and methods
 - **Python 3** (`numpy`, `matplotlib`, `scipy.optimize.curve_fit`)
 - **LaTeX (Overleaf)** for report generation
-- **Thermocouple T-type** + **CR1000X datalogger**
+- **Thermocouple K-type** + **CR1000X datalogger**
 - **Tungsten filament lamp** as radiant source
 - **Lumped-parameter thermal modeling**
 
