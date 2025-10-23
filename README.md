@@ -6,7 +6,7 @@ This project combines **experimental data acquisition** and **analytical modelin
 
 ## Overview
 A 1×1 cm copper plate (1 mm thick) was irradiated by a tungsten lamp.  
-Temperature was measured with a **Type-T thermocouple** connected to a **CR1000X datalogger**.  
+Temperature was measured with a **Type-K thermocouple** connected to a **CR1000X datalogger**.  
 From the measured transient, a **lumped-capacity model** was applied to extract:
 - absorbed power \( P_\text{abs} \),
 - total heat transfer coefficient \( h_\text{tot} \),
